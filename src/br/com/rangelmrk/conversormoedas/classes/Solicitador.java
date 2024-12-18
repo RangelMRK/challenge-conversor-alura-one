@@ -12,7 +12,7 @@ public class Solicitador {
 
     public Resultado solicitador(String moeda1, String moeda2, double valor) {
 
-        URI apiUrl = URI.create("https://v6.exchangerate-api.com/v6/43543aab3bf54403d4dec146/pair/" + moeda1 + "/" + moeda2 + "/" + valor);
+        URI apiUrl = URI.create("https://v6.exchangerate-api.com/v6/${CC_API_KEY}/pair/" + moeda1 + "/" + moeda2 + "/" + valor);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
